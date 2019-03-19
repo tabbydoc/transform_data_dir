@@ -41,8 +41,8 @@ folder_ann = 'Annatations'
 folder_img = 'Images'
 
 try:
-    os.mkdir(output_folder + '\\annatations')
-    os.mkdir(output_folder + '\\annatations\\xmls')
+    os.mkdir(output_folder + '\\annotations')
+    os.mkdir(output_folder + '\\annotations\\xmls')
     os.mkdir(output_folder + '\\images')
 except OSError:
     print("Создать директорию %s не удалось. Возможно она уже существует." % output_folder)
@@ -52,8 +52,8 @@ else:
 
 Files = os.listdir(input_folder + '/' + folder_ann)
 
-xml_folder = os.path.join(output_folder, "annatations\\xmls")
-trainval_path = os.path.join(output_folder, "annatations")
+xml_folder = os.path.join(output_folder, "annotations\\xmls")
+trainval_path = os.path.join(output_folder, "annotations")
 img_folder = os.path.join(output_folder, "images")
 
 f = open(trainval_path + '\\' + 'trainval.txt', 'w')
